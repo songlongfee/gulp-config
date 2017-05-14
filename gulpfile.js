@@ -50,4 +50,7 @@ gulp.task('default', function() { //自动监听、实时编译
     gulp.watch('./prefix/*.css', function() {
         gulp.run('autoprefix');
     });
+    gulp.watch('./es6/*.js', function() {
+        gulp.run('babel');
+    });
 });
