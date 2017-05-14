@@ -1,0 +1,9 @@
+div {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+}

@@ -1,0 +1,57 @@
+//带参混合
+.std-border(@width,@color) {
+  border: @width solid @color;
+}
+h1{
+  color: #666;
+  .std-border(6px,#dec);
+}
+//带条件参数混合
+.class1(@w) when (@w>10) {
+  width: @w;
+}
+.class1(@w) when (@w<=10) {
+  height: @w;
+}
+p{
+  .class1(6px);
+}
+h6{
+  .class1(12px);
+}
+//规则嵌套
+.navbar {
+  width: 100%;
+  .nav {
+    background: #efd;
+    >a {
+      color: #dfa;
+      &:hover {
+        color: #333;
+      }
+    }
+    >a:hover {
+      color: #666;
+    }
+  }
+}
+//运算
+@std-width: 100px;
+@red: #f00;
+@opcity: .6;
+.box {
+  width: @std-width*2;
+}
+.box-bg {
+  width: @std-width;
+  color: @red + #0f0;
+  opacity: @opcity + .2;
+}
+//函数
+.class2(@w,@h) {
+  width: round(@w)px;
+  height: percentage(@h);
+}
+.class3 {
+  .class2(12.2, .8);
+}

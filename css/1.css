@@ -1,0 +1,37 @@
+h1 {
+  color: #666;
+  border: 6px solid #dec;
+}
+p {
+  height: 6px;
+}
+h6 {
+  width: 12px;
+}
+.navbar {
+  width: 100%;
+}
+.navbar .nav {
+  background: #efd;
+}
+.navbar .nav > a {
+  color: #dfa;
+}
+.navbar .nav > a:hover {
+  color: #333;
+}
+.navbar .nav > a:hover {
+  color: #666;
+}
+.box {
+  width: 200px;
+}
+.box-bg {
+  width: 100px;
+  color: #ffff00;
+  opacity: 0.8;
+}
+.class3 {
+  width: 12 px;
+  height: 80%;
+}
