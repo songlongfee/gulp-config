@@ -39,18 +39,9 @@ gulp.task('babel', function() {
         .pipe(gulp.dest('es5'))
 });
 
-gulp.task('default', function() { //自动监听、实时编译
-    gulp.run('less', 'scripts', 'autoprefix');
-    gulp.watch('./js/*.js', function() {
-        gulp.run('scripts');
-    });
-    gulp.watch('./less/*.less', function() {
-        gulp.run('less');
-    });
-    gulp.watch('./prefix/*.css', function() {
-        gulp.run('autoprefix');
-    });
-    gulp.watch('./es6/*.js', function() {
-        gulp.run('babel');
-    });
+gulp.task('default', ['less', 'scripts', 'autoprefix', 'babel'], function() { //自动监听、实时编译
+    gulp.watch('./js/*.js', ['scripts']);
+    gulp.watch('./less/*.less', ['less']);
+    gulp.watch('./prefix/*.css', ['autoprefix']);
+    gulp.watch('./es6/*.js', ['babel']);
 });
