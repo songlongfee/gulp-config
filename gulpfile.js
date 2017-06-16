@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var less = require('gulp-less'); //编译less
 var concat = require('gulp-concat'); //合并文件
-var uglify = require('gulp-uglify'); //压缩文件
+var uglify = require('gulp-uglify'); //压缩js文件
 var rename = require('gulp-rename'); //文件重命名
 var autoprefixer = require('gulp-autoprefixer'); //添加浏览器前缀
-var babel = require('gulp-babel'); //编译ES6 => ES5
-
+var babel = require('gulp-babel'); //编译ES6
+var cssmin = require('gulp-minify-css'); //压缩css
+var imgmin = require('gulp-imagemin'); //图片压缩
+var imgquant = require('imagemin-pngquant'); //图片无损压缩
 gulp.task('less', function() {  //编译less => css
     gulp.src('./less/*.less')
         .pipe(less())
