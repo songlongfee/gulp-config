@@ -1,2 +1,2 @@
 # gulp-config
-### gulp配置文件
+### gulp基本配置文件
