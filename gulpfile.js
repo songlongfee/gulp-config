@@ -62,7 +62,7 @@ gulp.task('babel', function() {  //编译es6
         .pipe(uglify())
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('./dist/js/core'))
-    gulp.src('./src/js/lib/*.js')
+    gulp.src(['./src/js/lib/*.js','!*.min.js'])
         .pipe(changed('./dist/js/lib'))
         .pipe(babel({
             presets: ['es2015']
@@ -72,7 +72,7 @@ gulp.task('babel', function() {  //编译es6
         .pipe(uglify())
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('./dist/js/lib'))
-    gulp.src('./src/js/ui/*.js')
+    gulp.src(['./src/js/ui/*.js','!*.min.js'])
         .pipe(changed('./dist/js/ui'))
         .pipe(babel({
             presets: ['es2015']

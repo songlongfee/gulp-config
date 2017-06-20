@@ -1,6 +1,0 @@
-div {
-  transform: rotate(30deg);
-  display: flex;
-  border-radius: 5px;
-  width: calc(100% - 20px);
-}
