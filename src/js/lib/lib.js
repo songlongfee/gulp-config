@@ -1,2 +1,2 @@
-import common from './exports.js';
+import common from '../core/exports.js';
 common.print();
